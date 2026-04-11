@@ -317,11 +317,19 @@ nav .nav-links a:hover { color: #fff; }
 }
 
 .kreiskarte-visual {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 1rem;
-    padding: 2.5rem;
     text-align: center;
+}
+
+.kreiskarte-img {
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.kreiskarte-caption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
 }
 
 .kreiskarte-features {
