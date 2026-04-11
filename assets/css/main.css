@@ -519,23 +519,46 @@ footer {
     background: var(--tanne-900);
     color: var(--tanne-100);
     padding: 2.5rem 0;
-    text-align: center;
     font-size: 0.9rem;
 }
 
 footer a { color: var(--tanne-100); }
+footer a:hover { color: #fff; }
 
-footer .sponsor {
-    margin-top: 0.25rem;
-    font-size: 0.8rem;
-    opacity: 0.6;
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-footer .footer-links {
+.footer-brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.footer-credit { opacity: 0.7; }
+
+.footer-sponsor {
+    font-size: 0.8rem;
+    opacity: 0.45;
+    margin-top: 0.15rem;
+}
+
+.footer-right {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 0.75rem;
+    gap: 1.5rem;
+    padding-top: 0.15rem;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.25rem;
+    }
 }
 
 /* ── Responsive ───────────────────────────────────────────────── */
