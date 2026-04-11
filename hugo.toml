@@ -1,0 +1,20 @@
+baseURL = "https://neurg.de/"
+languageCode = "de"
+title = "Neurg — Das WordPress-Theme für Grüne Kreisverbände"
+
+[params]
+  description = "Ein WordPress-Theme, ein Kreisverband, alle Ortsverbände. Einfach. Kostenlos. Erprobt."
+  githubRepo = "https://github.com/neurg-de/kreisverband"
+
+[build]
+  [build.buildStats]
+    disableClasses = false
+    disableIDs = false
+    disableTags = false
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.css]
+      keepCSS2 = true

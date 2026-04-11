@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌻</text></svg>">
+    {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+<body>
+
+{{ $repo := .Site.Params.githubRepo }}
+
+<!-- ── Nav ──────────────────────────────────────────────────────────────── -->
+<nav>
+    <div class="container">
+        <a href="#" class="logo">neurg</a>
+        <ul class="nav-links">
+            <li><a href="#so-gehts">So geht's</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#kreiskarte">Kreiskarte</a></li>
+            <li><a href="#beispiele">Beispiele</a></li>
+            <li><a href="{{ $repo }}/releases">Releases</a></li>
+            <li><a href="{{ $repo }}">GitHub</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+<section class="hero">
+    <div class="container">
+        <h1>Ein Theme. Ein Kreisverband.<br>Alle Ortsverbände.</h1>
+        <p>Neurg ist ein WordPress-Theme. Kein Page-Builder, kein Multisite-Setup, keine Agentur. Einfach installieren, Ortsverbände anlegen, fertig &mdash; euer ganzer Kreisverband auf einer Website.</p>
+        <div class="hero-buttons">
+            <a href="{{ $repo }}" class="btn btn-primary">Auf GitHub ansehen</a>
+            <a href="#features" class="btn btn-outline">Features entdecken</a>
+        </div>
+        <div class="badges">
+            <span class="badge">Open Source &amp; kostenlos</span>
+            <span class="badge">Nur ein Theme &mdash; keine Plugins nötig</span>
+            <span class="badge">DSGVO-konform</span>
+            <span class="badge">EU-VO 2024/900</span>
+            <span class="badge">WordPress 6.4&ndash;6.9</span>
+        </div>
+    </div>
+</section>
+
+<!-- ── So geht's ───────────────────────────────────────────────────────── -->
+<section class="steps" id="so-gehts">
+    <div class="container">
+        <h2>So einfach geht's</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>WordPress hosten</h3>
+                <p>Ein ganz normales WordPress-Hosting &mdash; bei einem beliebigen Anbieter. Ein Vertrag für den ganzen Kreisverband.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Theme installieren</h3>
+                <p>Neurg hochladen und aktivieren. Der Einrichtungsassistent führt durch die wichtigsten Einstellungen.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Ortsverbände anlegen</h3>
+                <p>OVs hinzufügen, Zugänge für OV-Admins erstellen &mdash; jeder pflegt nur seinen Bereich.</p>
+            </div>
+        </div>
+        <p class="steps-note">Kein Multisite. Keine Plugins. <strong>Nur ein Theme.</strong></p>
+    </div>
+</section>
+
+<!-- ── Problem ──────────────────────────────────────────────────────────── -->
+<section class="problem">
+    <div class="container">
+        <h2>Die Realität in vielen Kreisverbänden</h2>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="icon">&#128176;</div>
+                <h3>Jeder OV zahlt einzeln</h3>
+                <p>Hosting, Domain, Theme &mdash; jeder Ortsverband hat eigene Kosten. Geld, das in die politische Arbeit fließen könnte.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">&#128295;</div>
+                <h3>Technik statt Politik</h3>
+                <p>Updates, Plugins, Sicherheit &mdash; irgendwer im OV muss sich um die Website kümmern. Oft weiß niemand, wie.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">&#128566;</div>
+                <h3>Wildwuchs im Auftritt</h3>
+                <p>Veraltete Designs, tote Links, vergessene Seiten. Der digitale Auftritt des Kreisverbands wirkt zersplittert und unprofessionell.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Features ────────────────────────────────────────────────────────── -->
+<section class="features" id="features">
+    <div class="container">
+        <h2>Was Neurg mitbringt</h2>
+        <p class="features-intro">Alles, was ein Kreisverband braucht &mdash; eingebaut ins Theme, nicht zusammengestückelt aus Plugins.</p>
+
+        <!-- Ortsverbände & Nutzerverwaltung -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Ortsverbände &amp; Nutzerverwaltung</h3>
+            <div class="feature-category-grid">
+                <div class="feature-card">
+                    <h4>Alle OVs unter einem Dach</h4>
+                    <p>Jeder Ortsverband bekommt seinen eigenen Bereich mit eigener Startseite, eigenem Team, eigenen Terminen und Beiträgen &mdash; auf einer einzigen WordPress-Installation.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Optimierte Rollenverwaltung</h4>
+                    <p>Fünf maßgeschneiderte Rollen: KV-Admin, KV-Autor, KV-Autor mit OV-Zugriff, OV-Admin, OV-Autor. Jede*r sieht genau das, was sie*er braucht &mdash; nicht mehr.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Schrittweise einführen</h4>
+                    <p>Startet mit dem KV allein. Fügt OVs hinzu, wenn sie bereit sind. Es gibt keinen Zwang, alle auf einmal umzuziehen.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personen & Profile -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Personen &amp; Profile</h3>
+            <div class="feature-category-grid">
+                <div class="feature-card">
+                    <h4>Eigene Profilseite pro Person</h4>
+                    <p>Jede Person &mdash; Vorstand, Mandatsträger*in, Sprecher*in &mdash; bekommt ein eigenes Profil mit Foto, Position, Funktion und Kontaktdaten.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Nach Abteilung &amp; OV filtern</h4>
+                    <p>Wer gehört zum Vorstand? Wer sitzt im Gemeinderat? Personen lassen sich nach Abteilung und Ortsverband filtern und darstellen.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Teams auf einen Blick</h4>
+                    <p>Shortcodes und Gutenberg-Blöcke für Teamlisten, Raster-Ansichten und Organigramme. Flexibel einsetzbar auf jeder Seite.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Termine & Kalender -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Termine &amp; Kalender</h3>
+            <div class="feature-category-grid">
+                <div class="feature-card">
+                    <h4>Eingebautes Terminmanagement</h4>
+                    <p>Eigener Termin-Post-Type mit Datum, Ort und Beschreibung. Kein Plugin, kein externer Dienst.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>iCal-Export &amp; Kalender-Abo</h4>
+                    <p>Termine als iCal-Feed abonnieren oder einzeln herunterladen. Funktioniert mit Apple Kalender, Google Calendar, Outlook.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Termine pro OV oder KV-weit</h4>
+                    <p>Jeder OV sieht seine Termine, der KV sieht alles. Besucher*innen können nach Ortsverband filtern.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eingebaut statt Plugin -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Eingebaut statt Plugin</h3>
+            <div class="feature-category-grid">
+                <div class="feature-card">
+                    <h4>Kontaktformular</h4>
+                    <p>Spam-geschützt mit Honeypot und Rate-Limiting. Kein Contact Form 7, kein Jetpack &mdash; einfach eingebaut.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Spenden</h4>
+                    <p>Twingle-Integration, IBAN/BIC-Anzeige, PayPal-Links und Spendenbalken mit Fortschrittsanzeige.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>SEO</h4>
+                    <p>JSON-LD Structured Data, Open Graph, Meta-Beschreibungen, Breadcrumbs, kanonische URLs &mdash; ohne Yoast oder RankMath.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Social Media</h4>
+                    <p>Zentrale Profile für Instagram, Facebook, Bluesky, Mastodon, X, TikTok, Threads, YouTube &mdash; pro KV und pro OV.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Cookie-Banner &amp; DSGVO</h4>
+                    <p>Nur technisch notwendige Cookies, eingebauter Cookie-Banner. Keine Tracker, keine externen Dienste, kein Borlabs nötig.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>EU-VO 2024/900</h4>
+                    <p>Compliance mit der EU-Verordnung zur politischen Werbung via The Taurus &mdash; Badge und Sponsoren-Hinweis eingebaut.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WordPress pur -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Das volle WordPress &mdash; ohne Einschränkungen</h3>
+            <div class="feature-category-grid">
+                <div class="feature-card">
+                    <h4>Block-Editor / Gutenberg</h4>
+                    <p>Volle Unterstützung für den WordPress-Block-Editor. Seiten und Beiträge gestalten, wie man es von WordPress kennt.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>20+ Shortcodes</h4>
+                    <p>Tabs, Parallax-Sektionen, Info-Boxen, Icons, Teamlisten, Mandatsanzeigen &mdash; sofort einsetzbar.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Menüs, Widgets, Mediathek</h4>
+                    <p>Alles, was WordPress von Haus aus bietet, funktioniert. Keine Einschränkungen, keine Custom-Workarounds.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Custom Widgets</h4>
+                    <p>Social-Media-Links und Teaser-Artikel als fertige Widgets &mdash; einfach in die Sidebar ziehen.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Design &amp; Barrierefreiheit</h3>
+            <div class="feature-category-grid">
+                <div class="feature-card">
+                    <h4>Grünes Design System 2024</h4>
+                    <p>Basiert auf dem offiziellen Design-System der Grünen. Klee, Tanne, Sand, Sonne &mdash; sofort als Grün erkennbar.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Responsive &amp; barrierefrei</h4>
+                    <p>Funktioniert auf Desktop, Tablet und Smartphone. Semantisches HTML, sinnvolle Kontraste, keine Layout-Hacks.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Editor-Styles</h4>
+                    <p>Was im Editor steht, sieht genauso aus wie auf der Website. WYSIWYG &mdash; ohne Überraschungen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Kreiskarte ───────────────────────────────────────────────────────── -->
+<section class="kreiskarte" id="kreiskarte">
+    <div class="container">
+        <div class="kreiskarte-layout">
+            <div>
+                <h2>Die Kreiskarte &mdash; euer Landkreis auf einen Blick</h2>
+                <p>Das Highlight: Eine interaktive SVG-Karte eures gesamten Landkreises. Jede Gemeinde anklickbar, jeder OV sichtbar. Generiert aus echten OpenStreetMap-Daten &mdash; für jeden Landkreis in Deutschland.</p>
+                <p>Bürger*innen sehen sofort, welcher OV für ihre Gemeinde zuständig ist. Ein Klick, und sie landen auf der richtigen Seite.</p>
+                <ul class="kreiskarte-features">
+                    <li>Automatische Kartengenerierung aus OSM-Daten</li>
+                    <li>Klickbare Gemeinden mit direkter OV-Verlinkung</li>
+                    <li>Optimale Labelplatzierung (Polylabel-Algorithmus)</li>
+                    <li>Responsive &amp; barrierefrei</li>
+                    <li>Funktioniert für jeden Landkreis in Deutschland</li>
+                </ul>
+            </div>
+            <div class="kreiskarte-visual">
+                <svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:360px;">
+                    <path d="M80,40 L160,20 L240,30 L320,60 L340,140 L330,220 L280,280 L200,310 L120,290 L60,230 L50,150 Z" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                    <path d="M80,40 L180,150" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M160,20 L180,150" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M240,30 L180,150" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M320,60 L180,150 L340,140" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M180,150 L330,220" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M180,150 L280,280" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M180,150 L200,310" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M180,150 L120,290" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M180,150 L60,230" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <path d="M180,150 L50,150" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                    <circle cx="120" cy="80" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="200" cy="60" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="290" cy="100" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="300" cy="190" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="250" cy="260" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="160" cy="270" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="80" cy="200" r="6" fill="#FFF17A" opacity="0.9"/>
+                    <circle cx="100" cy="140" r="6" fill="#008939" opacity="0.7"/>
+                    <circle cx="220" cy="180" r="6" fill="#008939" opacity="0.7"/>
+                    <circle cx="80" cy="330" r="5" fill="#FFF17A"/>
+                    <text x="92" y="335" fill="rgba(255,255,255,0.7)" font-size="12">Ortsverband</text>
+                    <circle cx="210" cy="330" r="5" fill="#008939"/>
+                    <text x="222" y="335" fill="rgba(255,255,255,0.7)" font-size="12">Noch ohne OV</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Werbung für Gemeinden ohne OV ─────────────────────────────────── -->
+<section class="werbung">
+    <div class="container">
+        <div class="werbung-layout">
+            <div class="werbung-box">
+                <h3>Beispiel: Gemeinde ohne OV</h3>
+                <p style="opacity:0.85;margin-top:0.75rem;">Klickt jemand auf der Kreiskarte eine Gemeinde ohne eigenen Ortsverband an, landet er nicht im Nichts &mdash; sondern auf einer Werbeseite:</p>
+                <ul style="margin-top:1rem;padding-left:1.2rem;opacity:0.85;">
+                    <li>Was machen die Grünen in der Region?</li>
+                    <li>Wie kann ich mitmachen?</li>
+                    <li>Kontakt zum Kreisverband</li>
+                </ul>
+                <p style="opacity:0.85;margin-top:1rem;font-style:italic;">Jede Gemeinde wird zur Einladung.</p>
+            </div>
+            <div>
+                <h2>Wachstum eingebaut</h2>
+                <p>In vielen Landkreisen gibt es Gemeinden, in denen die Grünen noch keinen eigenen Ortsverband haben. Neurg macht aus jeder dieser Gemeinden eine Chance.</p>
+                <p style="margin-top:1rem;">Statt einer leeren Seite sehen interessierte Bürger*innen eine Einladung zum Mitmachen &mdash; mit einem eigenen Werbe-Seitentyp, der speziell für Gemeinden ohne OV gedacht ist.</p>
+                <p style="margin-top:1rem;">So wird die Website nicht nur ein Informationsangebot, sondern ein aktives Werkzeug für Mitgliedergewinnung.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Bedenken ─────────────────────────────────────────────────────────── -->
+<section class="concerns">
+    <div class="container">
+        <h2>Wir kennen die Bedenken</h2>
+        <div class="concerns-grid">
+            <div class="concern">
+                <div class="question">&laquo;Ist das nicht super kompliziert?&raquo;</div>
+                <p>Nein. Es ist ein WordPress-Theme. Wer einen WordPress-Beitrag schreiben kann, kann Neurg bedienen. OV-Admins sehen nur ihren Bereich &mdash; übersichtlich und aufgeräumt.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Verlieren die OVs ihre Eigenständigkeit?&raquo;</div>
+                <p>Im Gegenteil. Jeder OV hat seinen eigenen Bereich mit eigenem Team, eigenen Terminen und eigenen Beiträgen. Aber ohne sich um Technik kümmern zu müssen.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Was kostet das?&raquo;</div>
+                <p>Das Theme ist Open Source und kostenlos. Ihr braucht ein WordPress-Hosting &mdash; eines für den ganzen KV. Keine Einzelverträge pro OV, keine Lizenzgebühren.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Ist das DSGVO-konform?&raquo;</div>
+                <p>Ja. Minimale Cookies, eingebauter Cookie-Banner, keine externen Tracker. Kein Borlabs, kein Cookiebot. Und die EU-VO 2024/900 ist über The Taurus abgedeckt.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Wer wartet das?&raquo;</div>
+                <p>Eine Person im KV kümmert sich um WordPress-Updates und Hosting. Die OVs pflegen nur ihre Inhalte. Keine Plugin-Updates, keine Sicherheitslücken, kein Stress.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Brauchen wir eine Agentur dafür?&raquo;</div>
+                <p>Nein. WordPress-Hosting gibt es ab wenigen Euro im Monat. Theme installieren, Einrichtungsassistent durchlaufen, OVs anlegen &mdash; das geht ohne Agentur.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Beispiele ────────────────────────────────────────────────────────── -->
+<section class="examples" id="beispiele">
+    <div class="container">
+        <h2>Neurg im Einsatz</h2>
+        <ul class="examples-list">
+            <li>
+                <span class="example-name">KV Starnberg</span>
+                <span class="example-url"><a href="https://gruene-starnberg.de">gruene-starnberg.de</a></span>
+                <span class="example-badge">Referenz</span>
+            </li>
+            <li>
+                <span class="example-name">Euer Kreisverband?</span>
+                <span class="example-url"><a href="{{ $repo }}/issues">Meldet euch &mdash; wir nehmen euch gerne auf.</a></span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ── Trust ────────────────────────────────────────────────────────────── -->
+<section class="trust" id="erprobt">
+    <div class="container">
+        <h2>Erprobt, nicht theoretisch</h2>
+        <div class="trust-cards">
+            <div class="trust-card">
+                <div class="location">KV Starnberg</div>
+                <p>Im produktiven Einsatz. Battle-tested im Alltag eines aktiven Kreisverbands mit mehreren Ortsverbänden. Hier entstand das Theme &mdash; aus der Praxis heraus.</p>
+            </div>
+            <div class="trust-card">
+                <div class="location">Erfahrungen aus KV München</div>
+                <p>Viele Features basieren auf Erfahrungen aus einem der größten Kreisverbände Bayerns. Was dort funktioniert, funktioniert überall.</p>
+            </div>
+            <div class="trust-card">
+                <div class="location">Open Source auf GitHub</div>
+                <p>Der gesamte Code ist einsehbar. Keine Black Box, kein Vendor-Lock-in. GPLv2+ &mdash; euer Theme gehört euch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Tech ─────────────────────────────────────────────────────────────── -->
+<section class="tech">
+    <div class="container">
+        <h2>Unter der Haube</h2>
+        <ul class="tech-list">
+            <li>WordPress 6.4&ndash;6.9</li>
+            <li>PHP 8.1+</li>
+            <li>Null Plugin-Abhängigkeiten</li>
+            <li>Grünes Design System 2024</li>
+            <li>SEO (JSON-LD, Open Graph)</li>
+            <li>iCal-Feed &amp; Export</li>
+            <li>Twingle &amp; PayPal</li>
+            <li>Kontaktformular</li>
+            <li>OpenStreetMap-Kreiskarte</li>
+            <li>20+ Shortcodes</li>
+            <li>Gutenberg-Blöcke</li>
+            <li>Custom Post Types</li>
+            <li>5 Custom Rollen</li>
+            <li>Einrichtungsassistent</li>
+            <li>GitHub Actions CI/CD</li>
+            <li>PHPUnit-Tests</li>
+            <li>GPLv2+</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────────────────────── -->
+<section class="cta">
+    <div class="container">
+        <h2>Bereit für einen einheitlichen Webauftritt?</h2>
+        <p>WordPress hosten, Theme installieren, Ortsverbände anlegen. Das war's.</p>
+        <div class="cta-buttons">
+            <a href="{{ $repo }}/releases" class="btn btn-primary">Aktuelle Releases</a>
+            <a href="{{ $repo }}" class="btn btn-outline">Repository auf GitHub</a>
+            <a href="{{ $repo }}/issues" class="btn btn-outline">Fragen &amp; Feedback</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────── -->
+<footer>
+    <div class="container">
+        <p>Neurg &mdash; Ein Open-Source-Projekt von <a href="https://thetaurus.com">Severin Kistner</a></p>
+        <div class="footer-links">
+            <a href="{{ $repo }}">GitHub</a>
+            <a href="{{ $repo }}/releases">Releases</a>
+            <a href="{{ $repo }}/blob/main/CHANGELOG.md">Changelog</a>
+            <a href="{{ $repo }}/blob/main/LICENSE">Lizenz (GPLv2+)</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
