@@ -3,7 +3,7 @@ languageCode = "de"
 title = "Neurg — Das WordPress-Theme für Grüne Kreisverbände"
 
 [params]
-  description = "Das WordPress-Theme für Grüne Kreisverbände und Ortsverbände. Nach dem Grünen Styleguide 2024, mit Dark Mode. Einfach. Kostenlos. Open Source."
+  description = "Das WordPress-Theme für Grüne Kreisverbände und Ortsverbände. Nach dem Grünen Styleguide 2024. Einfach. Kostenlos. Open Source."
   githubRepo = "https://github.com/neurg-de/kreisverband"
 
 [build]
