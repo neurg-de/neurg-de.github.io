@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="96" fill="#005538"/>
+  <!-- Top: neurg -->
+  <text x="256" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="125" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-4">neurg</text>
+  <!-- Center line -->
+  <rect x="75" y="254" width="362" height="4" rx="2" fill="#FFF17A"/>
+  <!-- Bottom: neurg rotated 180° around center -->
+  <g transform="rotate(180, 256, 256)">
+    <text x="256" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="125" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-4">neurg</text>
+  </g>
+</svg>

@@ -36,7 +36,7 @@
 <section class="hero">
     <div class="container">
         <h1>Ein Theme. Ein Kreisverband.<br>Alle Ortsverbände.</h1>
-        <p>Neurg ist ein WordPress-Theme. Kein Page-Builder, kein Multisite-Setup, keine Agentur. Einfach installieren, Ortsverbände anlegen, fertig &mdash; euer ganzer Kreisverband auf einer Website.</p>
+        <p>Neurg ist ein WordPress-Theme für Grüne Kreisverbände und ihre Ortsverbände. Nach dem Grünen Styleguide 2024, mit Dark Mode. Kein Page-Builder, kein Multisite &mdash; einfach installieren, OVs anlegen, fertig.</p>
         <div class="hero-buttons">
             <a href="{{ $repo }}" class="btn btn-primary">Auf GitHub ansehen</a>
             <a href="#features" class="btn btn-outline">Features entdecken</a>
@@ -44,6 +44,7 @@
         <div class="badges">
             <span class="badge">Open Source &amp; kostenlos</span>
             <span class="badge">Nur ein Theme &mdash; keine Plugins nötig</span>
+            <span class="badge">Dark Mode</span>
             <span class="badge">DSGVO-konform</span>
             <span class="badge">EU-VO 2024/900</span>
             <span class="badge">WordPress 6.4&ndash;6.9</span>
@@ -222,8 +223,12 @@
             <h3 class="feature-category-title">Design &amp; Barrierefreiheit</h3>
             <div class="feature-category-grid">
                 <div class="feature-card">
-                    <h4>Grünes Design System 2024</h4>
-                    <p>Basiert auf dem offiziellen Design-System der Grünen. Klee, Tanne, Sand, Sonne &mdash; sofort als Grün erkennbar.</p>
+                    <h4>Grüner Styleguide 2024</h4>
+                    <p>Vollständig nach dem offiziellen Styleguide 2024 der Grünen gestaltet. Klee, Tanne, Sand, Sonne &mdash; sofort als Grün erkennbar, auf jedem Gerät.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Dark Mode</h4>
+                    <p>Automatischer Dark Mode, der sich an die Systemeinstellung anpasst. Gut für die Augen und gut für den Akku.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Responsive &amp; barrierefrei</h4>
@@ -424,7 +429,8 @@
 <!-- ── Footer ──────────────────────────────────────────────────────────── -->
 <footer>
     <div class="container">
-        <p>Neurg &mdash; Ein Open-Source-Projekt von <a href="https://thetaurus.com">Severin Kistner</a></p>
+        <p>Neurg &mdash; Ein Open-Source-Projekt von <a href="https://thetaurus.com/?utm_source=neurg&amp;utm_medium=footer&amp;utm_campaign=credit">Severin Kistner</a></p>
+        <p class="sponsor">Sponsored by <a href="https://thetaurus.com/?utm_source=neurg&amp;utm_medium=footer&amp;utm_campaign=sponsor">The Taurus</a></p>
         <div class="footer-links">
             <a href="{{ $repo }}">GitHub</a>
             <a href="{{ $repo }}/releases">Releases</a>

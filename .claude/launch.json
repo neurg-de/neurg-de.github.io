@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hugo",
+      "runtimeExecutable": "/opt/homebrew/bin/hugo",
+      "runtimeArgs": ["server", "--source", "/tmp/neurg-de.github.io", "--port", "1313"],
+      "port": 1313
+    }
+  ]
+}
