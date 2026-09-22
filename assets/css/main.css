@@ -557,12 +557,6 @@ footer a:hover { color: #fff; }
 
 .footer-credit { opacity: 0.7; }
 
-.footer-sponsor {
-    font-size: 0.8rem;
-    opacity: 0.45;
-    margin-top: 0.15rem;
-}
-
 .footer-right {
     display: flex;
     gap: 1.5rem;
