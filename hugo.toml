@@ -1,9 +1,9 @@
 baseURL = "https://neurg.de/"
 languageCode = "de"
-title = "Neurg — Das WordPress-Theme für Grüne Kreisverbände"
+title = "Neurg — Das WordPress-Theme für Grüne Verbände"
 
 [params]
-  description = "Das WordPress-Theme für Grüne Kreisverbände und Ortsverbände. Nach dem Grünen Styleguide 2024. Einfach. Kostenlos. Open Source."
+  description = "Ein WordPress-Theme für Grüne Verbände und ihre Untergliederungen. Zwei konfigurierbare Ebenen, eigene Bereiche und gemeinsame Verwaltung. Kostenlos und Open Source."
   githubRepo = "https://github.com/neurg-de/kreisverband"
 
 [build]

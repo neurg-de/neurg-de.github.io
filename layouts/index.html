@@ -24,7 +24,7 @@
         <ul class="nav-links">
             <li><a href="#so-gehts">So geht's</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#kreiskarte">Kreiskarte</a></li>
+            <li><a href="#kreiskarte">Verbandskarte</a></li>
             <li><a href="#beispiele">Beispiele</a></li>
             <li><a href="{{ $repo }}/releases">Releases</a></li>
             <li><a href="{{ $repo }}">GitHub</a></li>
@@ -35,17 +35,17 @@
 <!-- ── Hero ─────────────────────────────────────────────────────────────── -->
 <section class="hero">
     <div class="container">
-        <h1>Ein Theme. Ein Kreisverband.<br>Alle Ortsverbände.</h1>
-        <p>Neurg ist ein WordPress-Theme für Grüne Kreisverbände und ihre Ortsverbände. Nach dem Grünen Styleguide 2024, Kein Page-Builder, kein Multisite &mdash; einfach installieren, OVs anlegen, fertig.</p>
+        <h1>Ein Theme. Euer Verband.<br>Alle Untergliederungen.</h1>
+        <p>Neurg bringt euren Grünen Verband und seine Untergliederungen auf eine gemeinsame WordPress-Website. Kreisverband mit Ortsverbänden, Stadtverband mit Stadtteilgruppen oder Bezirksverband mit Kreisverbänden: Ihr wählt die Bezeichnungen und Präfixe im Einrichtungsassistenten.</p>
         <div class="hero-buttons">
-            <a href="{{ $repo }}" class="btn btn-primary">Auf GitHub ansehen</a>
+            <a href="{{ $repo }}/releases/tag/v0.10.0" class="btn btn-primary">Version 0.10.0 herunterladen</a>
             <a href="#features" class="btn btn-outline">Features entdecken</a>
         </div>
         <div class="badges">
             <span class="badge">Open Source &amp; kostenlos</span>
             <span class="badge">Nur ein Theme &mdash; keine Plugins nötig</span>
             <span class="badge">Optional: Dark Mode</span>
-            <span class="badge">DSGVO-konform</span>
+            <span class="badge">Cookie-Hinweis eingebaut</span>
             <span class="badge">WordPress 6.4&ndash;6.9</span>
         </div>
     </div>
@@ -59,7 +59,7 @@
             <div class="step">
                 <div class="step-number">1</div>
                 <h3>WordPress hosten</h3>
-                <p>Ein ganz normales WordPress-Hosting &mdash; bei einem beliebigen Anbieter. Ein Vertrag für den ganzen Kreisverband.</p>
+                <p>Ein WordPress-Hosting bei einem Anbieter eurer Wahl. Eine Installation für den Hauptverband und seine Untergliederungen.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
@@ -68,8 +68,13 @@
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Ortsverbände anlegen</h3>
-                <p>OVs hinzufügen, Zugänge für OV-Admins erstellen &mdash; jeder pflegt nur seinen Bereich.</p>
+                <h3>Verbandsebenen auswählen</h3>
+                <p>Beide Ebenen im Setup festlegen. Wählt passende Bezeichnungen, eigene Kürzel und das URL-Präfix für neue Untergliederungen.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Untergliederungen anlegen</h3>
+                <p>Eigene Bereiche anlegen und Redaktionszugänge vergeben. Jeder Bereich pflegt seine eigenen Inhalte.</p>
             </div>
         </div>
         <p class="steps-note">Kein Multisite. Keine Plugins. <strong>Nur ein Theme.</strong></p>
@@ -79,22 +84,22 @@
 <!-- ── Problem ──────────────────────────────────────────────────────────── -->
 <section class="problem">
     <div class="container">
-        <h2>Die Realität in vielen Kreisverbänden</h2>
+        <h2>Die Realität in vielen Verbänden</h2>
         <div class="problem-grid">
             <div class="problem-card">
                 <div class="icon">&#128176;</div>
-                <h3>Jeder OV zahlt einzeln</h3>
-                <p>Hosting, Domain, Theme &mdash; jeder Ortsverband hat eigene Kosten. Geld, das in die politische Arbeit fließen könnte.</p>
+                <h3>Jeder Bereich zahlt einzeln</h3>
+                <p>Hosting, Domain, Theme &mdash; getrennte Websites verursachen eigene Kosten. Mit einer gemeinsamen Installation bündelt ihr den Aufwand.</p>
             </div>
             <div class="problem-card">
                 <div class="icon">&#128295;</div>
                 <h3>Technik statt Politik</h3>
-                <p>Updates, Plugins, Sicherheit &mdash; irgendwer im OV muss sich um die Website kümmern. Oft weiß niemand, wie.</p>
+                <p>Updates, Plugins, Sicherheit &mdash; jede Untergliederung muss ihre Website technisch betreuen. Eine gemeinsame Installation macht die Zuständigkeit klar.</p>
             </div>
             <div class="problem-card">
                 <div class="icon">&#128566;</div>
                 <h3>Wildwuchs im Auftritt</h3>
-                <p>Veraltete Designs, tote Links, vergessene Seiten. Der digitale Auftritt des Kreisverbands wirkt zersplittert und unprofessionell.</p>
+                <p>Veraltete Designs, tote Links, vergessene Seiten. Ein gemeinsames Theme gibt euren Bereichen einen einheitlichen Auftritt.</p>
             </div>
         </div>
     </div>
@@ -104,23 +109,49 @@
 <section class="features" id="features">
     <div class="container">
         <h2>Was Neurg mitbringt</h2>
-        <p class="features-intro">Alles, was ein Kreisverband braucht &mdash; eingebaut ins Theme, nicht zusammengestückelt aus Plugins.</p>
+        <p class="features-intro">Eigene Inhalte für eure Bereiche, gemeinsame Verwaltung für den ganzen Verband.</p>
 
-        <!-- Ortsverbände & Nutzerverwaltung -->
         <div class="feature-category">
-            <h3 class="feature-category-title">Ortsverbände &amp; Nutzerverwaltung</h3>
+            <h3 class="feature-category-title">Passend zu eurer Verbandsart</h3>
+            <div class="feature-category-grid association-examples">
+                <div class="feature-card">
+                    <h4>Kreisverband &rarr; Ortsverbände</h4>
+                    <p>Eine gemeinsame Website für den Kreis und seine lokalen Verbände. Die Verbandskarte zeigt zum Beispiel die Gemeinden.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Stadtverband &rarr; Stadtteilgruppen</h4>
+                    <p>Ein Auftritt für die Stadt, eigene Inhalte für die Gruppen in den Stadtteilen. Die Karte kann verfügbare Stadtbezirksgrenzen verwenden.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Bezirksverband &rarr; Kreisverbände</h4>
+                    <p>Ein gemeinsamer Auftritt für den Bezirk mit eigenen Redaktionsbereichen für die Kreise. Die Karte kann Kreise und kreisfreie Städte zeigen.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Regionsverband &rarr; Ortsverbände</h4>
+                    <p>Eine gemeinsame Website für die Region und ihre lokalen Verbände. Auch Regionalverband, Ortsgruppe oder eigene Bezeichnungen sind auswählbar.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verbandsebenen & Nutzerverwaltung -->
+        <div class="feature-category">
+            <h3 class="feature-category-title">Verbandsebenen &amp; Nutzerverwaltung</h3>
             <div class="feature-category-grid">
                 <div class="feature-card">
-                    <h4>Alle OVs unter einem Dach</h4>
-                    <p>Jeder Ortsverband bekommt seinen eigenen Bereich mit eigener Startseite, eigenem Team, eigenen Terminen und Beiträgen &mdash; auf einer einzigen WordPress-Installation.</p>
+                    <h4>Alle Untergliederungen unter einem Dach</h4>
+                    <p>Jede Untergliederung kann einen eigenen Bereich mit eigener Startseite, eigenem Team, eigenen Terminen und Beiträgen erhalten &mdash; auf einer einzigen WordPress-Installation.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Eure Bezeichnungen und Präfixe</h4>
+                    <p>Kreis-, Stadt-, Bezirks- oder Regionsverband: Wählt beide Ebenen unabhängig voneinander oder verwendet eigene Namen. Anzeigepräfixe und das URL-Präfix neuer Untergliederungen sind anpassbar. Bestehende URLs und Kontozuordnungen bleiben erhalten.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Optimierte Rollenverwaltung</h4>
-                    <p>Fünf maßgeschneiderte Rollen: KV-Admin, KV-Autor, KV-Autor mit OV-Zugriff, OV-Admin, OV-Autor. Jede*r sieht genau das, was sie*er braucht &mdash; nicht mehr.</p>
+                    <p>Redaktionsrollen für den Hauptverband, für einzelne Untergliederungen und für bereichsübergreifende Arbeit. Eingeschränkte Konten bearbeiten nur die für sie freigegebenen Inhalte.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Schrittweise einführen</h4>
-                    <p>Startet mit dem KV allein. Fügt OVs hinzu, wenn sie bereit sind. Es gibt keinen Zwang, alle auf einmal umzuziehen.</p>
+                    <p>Startet mit dem Hauptverband und ergänzt weitere Bereiche, sobald sie bereit sind. Die Website verwaltet höchstens zwei redaktionelle Ebenen.</p>
                 </div>
             </div>
         </div>
@@ -134,8 +165,8 @@
                     <p>Jede Person &mdash; Vorstand, Mandatsträger*in, Sprecher*in &mdash; bekommt ein eigenes Profil mit Foto, Position, Funktion und Kontaktdaten.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Nach Abteilung &amp; OV filtern</h4>
-                    <p>Wer gehört zum Vorstand? Wer sitzt im Gemeinderat? Personen lassen sich nach Abteilung und Ortsverband filtern und darstellen.</p>
+                    <h4>Nach Abteilung &amp; Bereich filtern</h4>
+                    <p>Wer gehört zum Vorstand? Wer sitzt im Gemeinderat? Personen lassen sich nach Abteilung und Verbandsbereich filtern und darstellen.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Teams auf einen Blick</h4>
@@ -157,8 +188,8 @@
                     <p>Termine als iCal-Feed abonnieren oder einzeln herunterladen. Funktioniert mit Apple Kalender, Google Calendar, Outlook.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Termine pro OV oder KV-weit</h4>
-                    <p>Jeder OV sieht seine Termine, der KV sieht alles. Besucher*innen können nach Ortsverband filtern.</p>
+                    <h4>Termine pro Bereich oder gemeinsam</h4>
+                    <p>Zeigt Termine eines einzelnen Bereichs oder einen gemeinsamen Kalender. Besucher*innen können nach Untergliederung filtern.</p>
                 </div>
             </div>
         </div>
@@ -181,11 +212,11 @@
                 </div>
                 <div class="feature-card">
                     <h4>Social Media</h4>
-                    <p>Zentrale Profile für Instagram, Facebook, Bluesky, Mastodon, X, TikTok, Threads, YouTube &mdash; pro KV und pro OV.</p>
+                    <p>Profile für Instagram, Facebook, Bluesky, Mastodon, X, TikTok, Threads, YouTube &mdash; für den Hauptverband und seine Untergliederungen.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Cookie-Banner &amp; DSGVO</h4>
-                    <p>Nur technisch notwendige Cookies, eingebauter Cookie-Banner. Keine Tracker, keine externen Dienste, kein Borlabs nötig.</p>
+                    <p>Ein Cookie-Hinweis ist eingebaut; das Theme benötigt selbst keine externen Tracker. Prüft zusätzlich eingebundene Dienste und Plugins für eure konkrete Website.</p>
                 </div>
             </div>
         </div>
@@ -243,20 +274,20 @@
     <div class="container">
         <div class="kreiskarte-layout">
             <div>
-                <h2>Die Kreiskarte &mdash; euer Landkreis auf einen Blick</h2>
-                <p>Das Highlight: Eine interaktive SVG-Karte eures gesamten Landkreises. Jede Gemeinde anklickbar, jeder OV sichtbar. Generiert aus echten OpenStreetMap-Daten &mdash; für jeden Landkreis in Deutschland.</p>
-                <p>Bürger*innen sehen sofort, welcher OV für ihre Gemeinde zuständig ist. Ein Klick, und sie landen auf der richtigen Seite.</p>
+                <h2>Die Verbandskarte &mdash; euer Gebiet auf einen Blick</h2>
+                <p>Die interaktive SVG-Karte verwendet Verwaltungsgrenzen aus OpenStreetMap. Wählt je nach Verbandsgebiet Gemeinden, Stadtbezirke oder größere Untergebiete und ordnet sie euren Untergliederungen zu.</p>
+                <p>Mehrere geografische Gebiete können auf denselben Verbandsbereich verweisen. Prüft den verfügbaren Zuschnitt in der Vorschau: Verwaltungsgrenzen und Parteigrenzen können voneinander abweichen.</p>
                 <ul class="kreiskarte-features">
                     <li>Automatische Kartengenerierung aus OSM-Daten</li>
-                    <li>Klickbare Gemeinden mit direkter OV-Verlinkung</li>
-                    <li>Optimale Labelplatzierung (Polylabel-Algorithmus)</li>
+                    <li>Gebiete mit lokaler Seite oder gültigem externen Ziel sind anklickbar</li>
+                    <li>Mehrteilige Grenzen und innere Aussparungen bleiben erhalten</li>
                     <li>Responsive &amp; barrierefrei</li>
-                    <li>Funktioniert für jeden Landkreis in Deutschland</li>
+                    <li>Geprüft mit München, Landkreis München, Landkreis Starnberg und Oberbayern</li>
                 </ul>
             </div>
             <div class="kreiskarte-visual">
-                <img src="/kreiskarte-beispiel.png" alt="Kreiskarte des Kreisverbands Starnberg mit klickbaren Gemeinden und Ortsverbänden" class="kreiskarte-img">
-                <p class="kreiskarte-caption">Kreiskarte im Einsatz: KV Starnberg</p>
+                <img src="/kreiskarte-beispiel.png" alt="Verbandskarte am Beispiel des Kreisverbands Starnberg mit Gemeinden und Ortsverbänden" class="kreiskarte-img">
+                <p class="kreiskarte-caption">Verbandskarte im Einsatz: KV Starnberg</p>
             </div>
         </div>
     </div>
@@ -267,19 +298,19 @@
     <div class="container">
         <div class="werbung-layout">
             <div class="werbung-box">
-                <h3>Beispiel: Gemeinde ohne OV</h3>
-                <p style="opacity:0.85;margin-top:0.75rem;">Klickt jemand auf der Kreiskarte eine Gemeinde ohne eigenen Ortsverband an, landet er nicht im Nichts &mdash; sondern auf einer Werbeseite:</p>
+                <h3>Beispiel: Gebiet ohne eigenen Verband</h3>
+                <p style="opacity:0.85;margin-top:0.75rem;">Für ein Gebiet ohne eigenen Verband kann die Administration eine Kontaktseite zuordnen. Sie beantwortet zum Beispiel:</p>
                 <ul style="margin-top:1rem;padding-left:1.2rem;opacity:0.85;">
                     <li>Was machen die Grünen in der Region?</li>
                     <li>Wie kann ich mitmachen?</li>
-                    <li>Kontakt zum Kreisverband</li>
+                    <li>Kontakt zum Hauptverband</li>
                 </ul>
-                <p style="opacity:0.85;margin-top:1rem;font-style:italic;">Jede Gemeinde wird zur Einladung.</p>
+                <p style="opacity:0.85;margin-top:1rem;font-style:italic;">Ohne erreichbares Ziel bleibt das Gebiet als „Im Aufbau“ ohne Link sichtbar.</p>
             </div>
             <div>
                 <h2>Wachstum eingebaut</h2>
-                <p>In vielen Landkreisen gibt es Gemeinden, in denen die Grünen noch keinen eigenen Ortsverband haben. Neurg macht aus jeder dieser Gemeinden eine Chance.</p>
-                <p style="margin-top:1rem;">Statt einer leeren Seite sehen interessierte Bürger*innen eine Einladung zum Mitmachen &mdash; mit einem eigenen Werbe-Seitentyp, der speziell für Gemeinden ohne OV gedacht ist.</p>
+                <p>Manche Gebiete haben noch keinen eigenen Verband oder keine lokale Website. Ein passender Kontaktweg hilft Interessierten, die Grünen vor Ort zu erreichen.</p>
+                <p style="margin-top:1rem;">Der eingebaute Werbe-Seitentyp bietet eine Einladung zum Mitmachen und zur Gründung einer lokalen Gruppe. Ob ein Gebiet dorthin verlinkt, entscheidet die Administration in der Kartenkonfiguration.</p>
                 <p style="margin-top:1rem;">So wird die Website nicht nur ein Informationsangebot, sondern ein aktives Werkzeug für Mitgliedergewinnung.</p>
             </div>
         </div>
@@ -292,16 +323,24 @@
         <h2>Wir kennen die Bedenken</h2>
         <div class="concerns-grid">
             <div class="concern">
-                <div class="question">&laquo;Ist das nicht super kompliziert?&raquo;</div>
-                <p>Nein. Es ist ein WordPress-Theme. Wer einen WordPress-Beitrag schreiben kann, kann Neurg bedienen. OV-Admins sehen nur ihren Bereich &mdash; übersichtlich und aufgeräumt.</p>
+                <div class="question">&laquo;Welche Verbandsebenen sind möglich?&raquo;</div>
+                <p>Ein Hauptverband und seine Untergliederungen, höchstens zwei redaktionelle Ebenen. Zum Beispiel Kreisverband mit Ortsverbänden, Stadtverband mit Stadtteilgruppen oder Bezirksverband mit Kreisverbänden. Die Bezeichnungen wählt ihr verpflichtend im Setup.</p>
             </div>
             <div class="concern">
-                <div class="question">&laquo;Verlieren die OVs ihre Eigenständigkeit?&raquo;</div>
-                <p>Im Gegenteil. Jeder OV hat seinen eigenen Bereich mit eigenem Team, eigenen Terminen und eigenen Beiträgen. Aber ohne sich um Technik kümmern zu müssen.</p>
+                <div class="question">&laquo;Warum heißt das Repository weiterhin kreisverband?&raquo;</div>
+                <p>Neurg begann als Theme für Kreisverbände. Das GitHub-Repository <a href="{{ $repo }}">kreisverband</a> und das Theme-Paket <code>neurg-kreisverband</code> behalten ihre historischen Namen. Die Bezeichnungen eurer beiden Ebenen sind konfigurierbar.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Ist das nicht super kompliziert?&raquo;</div>
+                <p>Es ist ein WordPress-Theme. Die Administration richtet die Bereiche ein; deren Redaktion pflegt Inhalte mit den vertrauten WordPress-Werkzeugen.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Behalten die Untergliederungen ihren eigenen Bereich?&raquo;</div>
+                <p>Jede Untergliederung kann eine eigene Startseite, ein eigenes Team, eigene Termine und Beiträge pflegen. Hosting und WordPress-Wartung werden gemeinsam organisiert.</p>
             </div>
             <div class="concern">
                 <div class="question">&laquo;Was kostet das?&raquo;</div>
-                <p>Das Theme ist Open Source und kostenlos. Ihr braucht ein WordPress-Hosting &mdash; eines für den ganzen KV. Keine Einzelverträge pro OV, keine Lizenzgebühren.</p>
+                <p>Das Theme ist Open Source und kostenlos. Ihr braucht ein WordPress-Hosting für die gemeinsame Installation. Für das Theme fallen keine Lizenzgebühren an.</p>
             </div>
             <div class="concern">
                 <div class="question">&laquo;Ist das DSGVO-konform?&raquo;</div>
@@ -309,11 +348,11 @@
             </div>
             <div class="concern">
                 <div class="question">&laquo;Wer wartet das?&raquo;</div>
-                <p>Eine Person im KV kümmert sich um WordPress-Updates und Hosting. Die OVs pflegen nur ihre Inhalte. Keine Plugin-Updates, keine Sicherheitslücken, kein Stress.</p>
+                <p>Die zuständige Administration kümmert sich um WordPress, Theme-Updates, Backups und Hosting. Die Untergliederungen pflegen ihre Inhalte mit getrennten Redaktionsrechten.</p>
             </div>
             <div class="concern">
                 <div class="question">&laquo;Brauchen wir eine Agentur dafür?&raquo;</div>
-                <p>Nein. WordPress-Hosting gibt es ab wenigen Euro im Monat. Theme installieren, Einrichtungsassistent durchlaufen, OVs anlegen &mdash; das geht ohne Agentur.</p>
+                <p>Für die Einrichtung braucht ihr Kenntnisse in WordPress-Hosting und Administration. Der Einrichtungsassistent führt durch die Verbandsdaten, Ebenen und Pflichtseiten.</p>
             </div>
         </div>
     </div>
@@ -330,7 +369,7 @@
                 <span class="example-badge">Referenz</span>
             </li>
             <li>
-                <span class="example-name">Euer Kreisverband?</span>
+                <span class="example-name">Euer Verband?</span>
                 <span class="example-url"><a href="{{ $repo }}/issues">Meldet euch &mdash; wir nehmen euch gerne auf.</a></span>
             </li>
         </ul>
@@ -348,7 +387,7 @@
             </div>
             <div class="trust-card">
                 <div class="location">Erfahrungen aus KV München</div>
-                <p>Viele Features basieren auf Erfahrungen aus einem der größten Kreisverbände Bayerns. Was dort funktioniert, funktioniert überall.</p>
+                <p>Viele Funktionen basieren auf Erfahrungen aus der Verbandsarbeit. Neue Gebietseinteilungen und Redaktionsabläufe werden vor dem Einsatz geprüft.</p>
             </div>
             <div class="trust-card">
                 <div class="location">Open Source auf GitHub</div>
@@ -371,11 +410,11 @@
             <li>iCal-Feed &amp; Export</li>
             <li>Twingle &amp; PayPal</li>
             <li>Kontaktformular</li>
-            <li>OpenStreetMap-Kreiskarte</li>
+            <li>OpenStreetMap-Verbandskarte</li>
             <li>20+ Shortcodes</li>
             <li>Gutenberg-Blöcke</li>
             <li>Custom Post Types</li>
-            <li>5 Custom Rollen</li>
+            <li>Getrennte Redaktionsrollen</li>
             <li>Einrichtungsassistent</li>
             <li>GitHub Actions CI/CD</li>
             <li>PHPUnit-Tests</li>
@@ -388,7 +427,7 @@
 <section class="cta">
     <div class="container">
         <h2>Bereit für einen einheitlichen Webauftritt?</h2>
-        <p>WordPress hosten, Theme installieren, Ortsverbände anlegen. Das war's.</p>
+        <p>WordPress hosten, Theme installieren, Verbandsebenen auswählen und Untergliederungen anlegen.</p>
         <div class="cta-buttons">
             <a href="{{ $repo }}/releases" class="btn btn-primary">Aktuelle Releases</a>
             <a href="{{ $repo }}" class="btn btn-outline">Repository auf GitHub</a>
@@ -407,7 +446,7 @@
         <div class="footer-right">
             <a href="{{ $repo }}">GitHub</a>
             <a href="{{ $repo }}/releases">Releases</a>
-            <a href="{{ $repo }}/blob/main/CHANGELOG.md">Changelog</a>
+            <a href="{{ $repo }}/releases/tag/v0.10.0">Änderungen in 0.10.0</a>
             <a href="{{ $repo }}/blob/main/LICENSE">Lizenz (GPLv2+)</a>
         </div>
     </div>
