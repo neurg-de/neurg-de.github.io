@@ -70,6 +70,7 @@ a:hover { color: var(--tanne-800); }
 }
 
 section { padding: 5rem 0; }
+section[id] { scroll-margin-top: 4.5rem; }
 
 /* ── Nav ──────────────────────────────────────────────────────── */
 nav {
@@ -121,9 +122,78 @@ nav .nav-links a:hover { color: #fff; }
 .hero {
     background: linear-gradient(135deg, var(--tanne-600) 0%, var(--tanne-700) 100%);
     color: #fff;
-    padding: 6rem 0 5rem;
+    padding: 5rem 0 4rem;
     text-align: center;
+    overflow: hidden;
 }
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3rem;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-layout h1 { font-size: clamp(2.1rem, 3.8vw, 3.1rem); }
+.hero-layout .hero-buttons { justify-content: flex-start; }
+.hero-layout .hero-buttons .btn { padding: 0.85rem 1.5rem; }
+
+.hero .hero-download { font-size: 0.9rem; margin: 1.25rem 0 0; opacity: 0.75; }
+.hero-download a { color: #fff; }
+
+.hero-visual { position: relative; display: block; padding: 0 0 2rem 0; }
+
+.browser-frame {
+    display: block;
+    background: #fff;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    transition: transform 0.2s;
+}
+
+.hero-visual:hover .browser-frame { transform: translateY(-3px); }
+
+.browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.55rem 0.75rem;
+    background: var(--sand-300);
+}
+
+.browser-bar span { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--sand-500); }
+
+.browser-bar em {
+    font-style: normal;
+    font-size: 0.75rem;
+    color: var(--tanne-500);
+    background: #fff;
+    border-radius: 1rem;
+    padding: 0.1rem 0.9rem;
+    margin-left: 0.75rem;
+}
+
+.browser-frame img, .phone-frame img { display: block; width: 100%; height: auto; }
+
+.phone-frame {
+    position: absolute;
+    right: -0.5rem;
+    bottom: 0;
+    width: 24%;
+    border: 6px solid var(--tanne-900);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: var(--tanne-900);
+}
+
+.btn-dark { background: var(--tanne-600); color: #fff; }
+.btn-dark:hover { background: var(--tanne-700); color: #fff; }
+
+.trust-join { margin: 2rem auto 0; color: var(--tanne-500); }
+.trust-join a { color: var(--tanne-600); font-weight: 700; }
 
 .hero p {
     margin: 1.5rem auto 2.5rem;
@@ -416,52 +486,88 @@ nav .nav-links a:hover { color: #fff; }
 .concern p { color: var(--tanne-500); font-size: 0.95rem; }
 
 /* ── Beispiele ────────────────────────────────────────────────── */
-.examples { background: #fff; }
+/* ── Referenz ────────────────────────────────────────────────── */
+.reference { background: #fff; }
 
-.examples-list {
-    list-style: none;
-    margin-top: 2rem;
-    max-width: 700px;
-}
-
-.examples-list li {
-    display: flex;
+.reference-layout {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 3.5rem;
     align-items: center;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--sand-500);
 }
 
-.examples-list li:first-child {
-    background: var(--klee-50);
-    border-radius: 0.75rem 0.75rem 0 0;
+.reference h2 { margin-top: 0.75rem; }
+
+.reference-text > p { color: var(--tanne-500); font-size: 1.1rem; }
+
+.reference-facts {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
 }
 
-.examples-list li:last-child {
-    border-bottom: none;
-    border-radius: 0 0 0.75rem 0.75rem;
-}
-
-.example-name {
-    font-weight: 700;
+.reference-facts li {
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    position: relative;
     color: var(--tanne-700);
-    min-width: 160px;
 }
 
-.example-url a {
-    color: var(--tanne-500);
-    font-size: 0.9rem;
+.reference-facts li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--klee-600);
+    font-weight: 800;
+}
+
+.reference-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 50px rgba(0,34,22,0.18);
+    border: 1px solid var(--sand-500);
 }
 
 .example-badge {
+    display: inline-block;
     font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     background: var(--klee-600);
     color: #fff;
-    padding: 0.15rem 0.6rem;
+    padding: 0.2rem 0.7rem;
     border-radius: 1rem;
-    margin-left: auto;
-    white-space: nowrap;
 }
+
+/* ── Austausch ────────────────────────────────────────────────── */
+.community { background: var(--tanne-800); color: #fff; }
+
+.community-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.community h2 { color: var(--sonne-600); }
+
+.community-layout > div > p { opacity: 0.9; margin-bottom: 2rem; font-size: 1.1rem; }
+
+.community-note { font-size: 0.85rem !important; opacity: 0.7 !important; margin: 1.25rem 0 0 !important; }
+.community-note a { color: #fff; }
+
+.community-list { list-style: none; }
+
+.community-list li {
+    background: rgba(255,255,255,0.07);
+    border-left: 4px solid var(--sonne-600);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.community-list strong { color: var(--sonne-500); }
 
 /* ── Trust / Erprobt ──────────────────────────────────────────── */
 .trust {
@@ -589,8 +695,14 @@ footer a:hover { color: #fff; }
         gap: 2rem;
     }
 
-    .examples-list li { flex-wrap: wrap; gap: 0.5rem; }
-    .example-name { min-width: auto; }
+    .hero { padding: 3.5rem 0 3rem; }
+    .hero-layout,
+    .reference-layout,
+    .community-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .phone-frame { right: 0; width: 28%; }
 
     nav .nav-links { display: none; }
 }

@@ -5,6 +5,7 @@ title = "Neurg — Das WordPress-Theme für Grüne Verbände"
 [params]
   description = "Ein WordPress-Theme für Grüne Verbände und ihre Untergliederungen. Zwei konfigurierbare Ebenen, eigene Bereiche und gemeinsame Verwaltung. Kostenlos und Open Source."
   githubRepo = "https://github.com/neurg-de/kreisverband"
+  signalGroup = "https://signal.group/#CjQKIEnWcXi3MqUe2gMiIq-MqRd6MkPkBLSBFDeBk9XU4dVpEhDuLokR1W0kjeIco-QhE0MK"
 
 [build]
   [build.buildStats]

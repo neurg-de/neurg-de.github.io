@@ -16,31 +16,46 @@
 <body>
 
 {{ $repo := .Site.Params.githubRepo }}
+{{ $signal := .Site.Params.signalGroup }}
 
 <!-- ── Nav ──────────────────────────────────────────────────────────────── -->
 <nav>
     <div class="container">
         <a href="#" class="logo"><img src="/logo.svg" alt="neurg" class="logo-img">neurg</a>
         <ul class="nav-links">
+            <li><a href="#referenz">Im Einsatz</a></li>
             <li><a href="#so-gehts">So geht's</a></li>
-            <li><a href="#features">Features</a></li>
+            <li><a href="#features">Funktionen</a></li>
             <li><a href="#kreiskarte">Verbandskarte</a></li>
-            <li><a href="#beispiele">Beispiele</a></li>
-            <li><a href="{{ $repo }}/releases">Releases</a></li>
-            <li><a href="{{ $repo }}">GitHub</a></li>
+            <li><a href="#austausch">Austausch</a></li>
+            <li><a href="{{ $repo }}/releases">Download</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- ── Hero ─────────────────────────────────────────────────────────────── -->
 <section class="hero">
-    <div class="container">
-        <h1>Ein Theme. Euer Verband.<br>Alle Untergliederungen.</h1>
-        <p>Neurg bringt euren Grünen Verband und seine Untergliederungen auf eine gemeinsame WordPress-Website. Kreisverband mit Ortsverbänden, Stadtverband mit Stadtteilgruppen oder Bezirksverband mit Kreisverbänden: Ihr wählt die Bezeichnungen und Präfixe im Einrichtungsassistenten.</p>
-        <div class="hero-buttons">
-            <a href="{{ $repo }}/releases/tag/v0.10.0" class="btn btn-primary">Version 0.10.0 herunterladen</a>
-            <a href="#features" class="btn btn-outline">Features entdecken</a>
+    <div class="container hero-layout">
+        <div class="hero-text">
+            <h1>Ein Theme. Euer Verband.<br>Alle Untergliederungen.</h1>
+            <p>Neurg bringt euren Grünen Verband und seine Untergliederungen auf eine gemeinsame WordPress-Website. Kreisverband mit Ortsverbänden, Stadtverband mit Stadtteilgruppen oder Bezirksverband mit Kreisverbänden: Ihr wählt die Bezeichnungen und Präfixe im Einrichtungsassistenten.</p>
+            <div class="hero-buttons">
+                <a href="https://gruene-starnberg.de" class="btn btn-primary">Live ansehen: KV Starnberg</a>
+                <a href="{{ $signal }}" class="btn btn-outline">Fragen? Signal-Gruppe</a>
+            </div>
+            <p class="hero-download">Für die Administration: <a href="{{ $repo }}/releases/tag/v0.10.0">Version 0.10.0 herunterladen</a></p>
         </div>
+        <a href="https://gruene-starnberg.de" class="hero-visual" aria-label="Website des Kreisverbands Starnberg ansehen">
+            <span class="browser-frame">
+                <span class="browser-bar"><span></span><span></span><span></span><em>gruene-starnberg.de</em></span>
+                <img src="/referenz/starnberg-desktop.jpg" alt="Startseite des Kreisverbands Starnberg mit Neurg: Titel, Ortsverbandssuche und Verbandskarte" width="1600" height="1000">
+            </span>
+            <span class="phone-frame">
+                <img src="/referenz/starnberg-mobil.jpg" alt="Dieselbe Startseite auf dem Smartphone" width="415" height="900">
+            </span>
+        </a>
+    </div>
+    <div class="container">
         <div class="badges">
             <span class="badge">Open Source &amp; kostenlos</span>
             <span class="badge">Nur ein Theme &mdash; keine Plugins nötig</span>
@@ -48,6 +63,27 @@
             <span class="badge">Cookie-Hinweis eingebaut</span>
             <span class="badge">WordPress 6.4&ndash;6.9</span>
         </div>
+    </div>
+</section>
+
+<!-- ── Referenz ─────────────────────────────────────────────────────────── -->
+<section class="reference" id="referenz">
+    <div class="container reference-layout">
+        <div class="reference-text">
+            <span class="example-badge">Referenz</span>
+            <h2>Im Einsatz: Kreisverband Starnberg</h2>
+            <p>Hier ist Neurg entstanden und läuft im Alltag eines aktiven Kreisverbands. Eine Installation trägt den Kreisverband und seine Ortsverbände &mdash; jeder Ortsverband pflegt seinen eigenen Bereich.</p>
+            <ul class="reference-facts">
+                <li><strong>Eine Website</strong> für den Kreis und die Ortsverbände</li>
+                <li><strong>Verbandskarte</strong> mit allen Gemeinden des Landkreises als Einstieg</li>
+                <li><strong>Gebiete ohne Ortsverband</strong> führen zum Mitmachen statt ins Leere</li>
+                <li><strong>Eigene Redaktionen</strong> für Ortsverbände mit getrennten Rechten</li>
+            </ul>
+            <a href="https://gruene-starnberg.de" class="btn btn-dark">gruene-starnberg.de ansehen &rarr;</a>
+        </div>
+        <a href="https://gruene-starnberg.de" class="reference-visual">
+            <img src="/referenz/starnberg-karte.jpg" alt="Verbandskarte des Kreisverbands Starnberg: Gemeinden mit Ortsverband grün, Gemeinden ohne Ortsverband weiß" width="1600" height="1000" loading="lazy">
+        </a>
     </div>
 </section>
 
@@ -317,6 +353,24 @@
     </div>
 </section>
 
+<!-- ── Austausch ────────────────────────────────────────────────────────── -->
+<section class="community" id="austausch">
+    <div class="container community-layout">
+        <div>
+            <h2>Ihr seid nicht allein mit eurer Website</h2>
+            <p>In der Signal-Gruppe tauschen sich Grüne Verbände aus, die Neurg nutzen oder darüber nachdenken &mdash; Vorstand, Geschäftsstelle, Redaktion und Administration.</p>
+            <a href="{{ $signal }}" class="btn btn-primary">Signal-Gruppe beitreten</a>
+            <p class="community-note">Bitte keine Zugangsdaten in die Gruppe posten. Bestätigte Fehler gerne zusätzlich auf <a href="{{ $repo }}/issues">GitHub</a> melden.</p>
+        </div>
+        <ul class="community-list">
+            <li><strong>Fragen stellen</strong> &mdash; ohne GitHub-Konto</li>
+            <li><strong>Erfahrungen teilen</strong> &mdash; Einrichtung, Umstieg, Redaktionsalltag</li>
+            <li><strong>Wünsche einbringen</strong> &mdash; was euer Verband als Nächstes braucht</li>
+            <li><strong>Neue Versionen</strong> &mdash; als Erste davon erfahren</li>
+        </ul>
+    </div>
+</section>
+
 <!-- ── Bedenken ─────────────────────────────────────────────────────────── -->
 <section class="concerns">
     <div class="container">
@@ -325,10 +379,6 @@
             <div class="concern">
                 <div class="question">&laquo;Welche Verbandsebenen sind möglich?&raquo;</div>
                 <p>Ein Hauptverband und seine Untergliederungen, höchstens zwei redaktionelle Ebenen. Zum Beispiel Kreisverband mit Ortsverbänden, Stadtverband mit Stadtteilgruppen oder Bezirksverband mit Kreisverbänden. Die Bezeichnungen wählt ihr verpflichtend im Setup.</p>
-            </div>
-            <div class="concern">
-                <div class="question">&laquo;Warum heißt das Repository weiterhin kreisverband?&raquo;</div>
-                <p>Neurg begann als Theme für Kreisverbände. Das GitHub-Repository <a href="{{ $repo }}">kreisverband</a> und das Theme-Paket <code>neurg-kreisverband</code> behalten ihre historischen Namen. Die Bezeichnungen eurer beiden Ebenen sind konfigurierbar.</p>
             </div>
             <div class="concern">
                 <div class="question">&laquo;Ist das nicht super kompliziert?&raquo;</div>
@@ -354,25 +404,19 @@
                 <div class="question">&laquo;Brauchen wir eine Agentur dafür?&raquo;</div>
                 <p>Für die Einrichtung braucht ihr Kenntnisse in WordPress-Hosting und Administration. Der Einrichtungsassistent führt durch die Verbandsdaten, Ebenen und Pflichtseiten.</p>
             </div>
+            <div class="concern">
+                <div class="question">&laquo;Wir haben schon eine Website. Lohnt sich der Umstieg?&raquo;</div>
+                <p>Beiträge, Seiten und Medien bleiben bei einem Theme-Wechsel in WordPress erhalten. Theme-eigene Elemente und getrennte Websites der Untergliederungen übernehmt ihr schrittweise. Erfahrungen dazu teilen Verbände in der <a href="{{ $signal }}">Signal-Gruppe</a>.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Wo bekommen wir Hilfe?&raquo;</div>
+                <p>In der <a href="{{ $signal }}">Signal-Gruppe</a> beantworten Verbände und Entwicklung Fragen. Fehler könnt ihr zusätzlich auf <a href="{{ $repo }}/issues">GitHub</a> melden.</p>
+            </div>
+            <div class="concern">
+                <div class="question">&laquo;Warum heißt das Repository weiterhin kreisverband?&raquo;</div>
+                <p>Neurg begann als Theme für Kreisverbände. Das GitHub-Repository <a href="{{ $repo }}">kreisverband</a> und das Theme-Paket <code>neurg-kreisverband</code> behalten ihre historischen Namen. Die Bezeichnungen eurer beiden Ebenen sind konfigurierbar.</p>
+            </div>
         </div>
-    </div>
-</section>
-
-<!-- ── Beispiele ────────────────────────────────────────────────────────── -->
-<section class="examples" id="beispiele">
-    <div class="container">
-        <h2>Neurg im Einsatz</h2>
-        <ul class="examples-list">
-            <li>
-                <span class="example-name">KV Starnberg</span>
-                <span class="example-url"><a href="https://gruene-starnberg.de">gruene-starnberg.de</a></span>
-                <span class="example-badge">Referenz</span>
-            </li>
-            <li>
-                <span class="example-name">Euer Verband?</span>
-                <span class="example-url"><a href="{{ $repo }}/issues">Meldet euch &mdash; wir nehmen euch gerne auf.</a></span>
-            </li>
-        </ul>
     </div>
 </section>
 
@@ -382,8 +426,8 @@
         <h2>Erprobt, nicht theoretisch</h2>
         <div class="trust-cards">
             <div class="trust-card">
-                <div class="location">KV Starnberg</div>
-                <p>Im produktiven Einsatz. Battle-tested im Alltag eines aktiven Kreisverbands mit mehreren Ortsverbänden. Hier entstand das Theme &mdash; aus der Praxis heraus.</p>
+                <div class="location">Aus der Praxis</div>
+                <p>Im produktiven Einsatz beim KV Starnberg, im Alltag eines aktiven Kreisverbands mit mehreren Ortsverbänden erprobt. Hier entstand das Theme.</p>
             </div>
             <div class="trust-card">
                 <div class="location">Erfahrungen aus KV München</div>
@@ -394,6 +438,7 @@
                 <p>Der gesamte Code ist einsehbar. Keine Black Box, kein Vendor-Lock-in. GPLv2+ &mdash; euer Theme gehört euch.</p>
             </div>
         </div>
+        <p class="trust-join">Euer Verband nutzt Neurg? <a href="{{ $signal }}">Meldet euch in der Signal-Gruppe</a> &mdash; wir nehmen euch gerne als Beispiel auf.</p>
     </div>
 </section>
 
@@ -429,9 +474,9 @@
         <h2>Bereit für einen einheitlichen Webauftritt?</h2>
         <p>WordPress hosten, Theme installieren, Verbandsebenen auswählen und Untergliederungen anlegen.</p>
         <div class="cta-buttons">
-            <a href="{{ $repo }}/releases" class="btn btn-primary">Aktuelle Releases</a>
-            <a href="{{ $repo }}" class="btn btn-outline">Repository auf GitHub</a>
-            <a href="{{ $repo }}/issues" class="btn btn-outline">Fragen &amp; Feedback</a>
+            <a href="{{ $repo }}/releases" class="btn btn-primary">Aktuelle Version herunterladen</a>
+            <a href="{{ $signal }}" class="btn btn-outline">Erst Fragen stellen: Signal-Gruppe</a>
+            <a href="{{ $repo }}" class="btn btn-outline">Code auf GitHub</a>
         </div>
     </div>
 </section>
@@ -445,6 +490,7 @@
         </div>
         <div class="footer-right">
             <a href="{{ $repo }}">GitHub</a>
+            <a href="{{ $signal }}">Signal-Gruppe</a>
             <a href="{{ $repo }}/releases">Releases</a>
             <a href="{{ $repo }}/releases/tag/v0.10.0">Änderungen in 0.10.0</a>
             <a href="{{ $repo }}/blob/main/LICENSE">Lizenz (GPLv2+)</a>
